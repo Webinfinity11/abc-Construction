@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fff8e0;
+  --color-brand-100: #fff0bd;
+  --color-brand-200: #ffe380;
+  --color-brand-300: #ffd640;
+  --color-brand-400: #ffcc1a;
+  --color-brand-500: #ffc400;
+  --color-brand-600: #e5a800;
+  --color-brand-700: #b07d00;
+  --color-brand-800: #705006;
+  --color-brand-900: #4d3500;
+  --color-brand-950: #3b2800;
+
+  --color-accent-50: #fdf3e8;
+  --color-accent-100: #fae2c7;
+  --color-accent-200: #f3c08a;
+  --color-accent-300: #eb9c50;
+  --color-accent-400: #db7f2a;
+  --color-accent-500: #c56612;
+  --color-accent-600: #a5520d;
+  --color-accent-700: #823f0c;
+  --color-accent-800: #5f2e0b;
+  --color-accent-900: #3f1f08;
+  --color-accent-950: #251204;
+
+  --color-ink-50: #f5f5f1;
+  --color-ink-100: #eceae6;
+  --color-ink-200: #d6d6d2;
+  --color-ink-300: #aaa9a3;
+  --color-ink-400: #817b70;
+  --color-ink-500: #77746f;
+  --color-ink-600: #565654;
+  --color-ink-700: #2a2a2a;
+  --color-ink-800: #202020;
+  --color-ink-900: #0a0a0a;
+  --color-ink-950: #050505;
+
+  --font-sans: var(--font-firago), Arial, sans-serif;
+  --font-display: var(--font-barlow), "Arial Narrow", Arial, sans-serif;
+
+  --radius-field: 0.625rem;
+  --radius-btn: 0.625rem;
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+
+  --shadow-xs: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 1px 3px 0 rgb(15 23 42 / 0.08);
+  --shadow-pop: 0 10px 30px -10px rgb(15 23 42 / 0.25);
+  --shadow-float: 0 24px 60px -20px rgb(15 23 42 / 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink-900);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
