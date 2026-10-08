@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { SERVICES } from '@/lib/data'
+import { useI18n } from '@/lib/i18n/client'
 import { F } from '@/lib/ui'
 
 export function ServicesAccordion({ detailed = false }: { detailed?: boolean }) {
+  const SERVICES = useI18n().t.services
   const [open, setOpen] = useState<number[]>([0])
   const toggle = (i: number) => setOpen((o) => (o.includes(i) ? o.filter((x) => x !== i) : [...o, i]))
 
@@ -17,7 +18,7 @@ export function ServicesAccordion({ detailed = false }: { detailed?: boolean }) 
     sync()
     window.addEventListener('hashchange', sync)
     return () => window.removeEventListener('hashchange', sync)
-  }, [])
+  }, [SERVICES])
 
   return (
     <div className="border-t border-ink-200">

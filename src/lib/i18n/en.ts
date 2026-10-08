@@ -1,0 +1,293 @@
+import type { Dict } from './ka'
+
+export const en: Dict = {
+  meta: {
+    title: 'ABC Construction — Construction & Interior Fit-Out',
+    description: 'We build high-quality, reliable spaces — from design and engineering to installation and final handover.',
+  },
+
+  nav: {
+    home: 'Home',
+    about: 'Company',
+    services: 'Services',
+    projects: 'Projects',
+    team: 'Team',
+    contact: 'Contact',
+  },
+
+  ui: {
+    contactUs: 'Contact us',
+    mainMenu: 'Main menu',
+    mobileMenu: 'Mobile menu',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    language: 'Language',
+    breadcrumb: 'Breadcrumb',
+    homeAria: 'ABC Construction — Home',
+    discuss: 'Discuss your project',
+    discussSimilar: 'Discuss a similar project',
+    allServices: 'All services',
+    requestQuote: 'Request a quote',
+    letsTalk: "Let's talk",
+    category: 'Construction & interior fit-out',
+    viewProject: 'View project',
+    allProjects: 'All projects',
+    photosNote: 'Photos are for illustration only.',
+    meetTeam: 'Meet the team',
+    footerNav: 'Site pages',
+    rights: 'All rights reserved.',
+    builtToLast: 'Built to last.',
+    slide: 'Slide',
+  },
+
+  contact: {
+    phone: '+995 000 00 00 00',
+    email: 'info@example.ge',
+    address: 'Tbilisi, Georgia',
+    hours: 'Mon–Fri, 10:00–19:00',
+  },
+
+  stats: {
+    aria: 'ABC Construction in numbers',
+    lead: 'Experience\nyou can trust.',
+    items: [
+      ['15', 'Projects', 'delivered'],
+      ['4', 'Team', 'members'],
+      ['17', 'Years', 'in business'],
+    ],
+  },
+
+  services: [
+    {
+      slug: 'construction',
+      t: 'Construction',
+      d: 'We deliver construction projects from design and interior fit-out to installation and final handover.',
+      items: ['Structural works', 'Shell and core', 'Facade works', 'Final handover'],
+    },
+    {
+      slug: 'engineering',
+      t: 'Engineering',
+      d: 'Engineering leadership is involved at every stage, ensuring quality, reliability and efficient project delivery.',
+      items: ['Engineering supervision', 'Technical solutions', 'Quality control', 'MEP coordination'],
+    },
+    {
+      slug: 'delivery',
+      t: 'Project delivery',
+      d: 'We deliver projects while consistently meeting deadlines and quality standards.',
+      items: ['Work schedule', 'Budget management', 'Regular reporting', 'One accountable team'],
+    },
+    {
+      slug: 'design-build',
+      t: 'Design & build',
+      d: 'From design to installation and final handover, we create functional spaces.',
+      items: ['Space planning', 'Interior fit-out', 'Material selection', 'Installation'],
+    },
+  ],
+
+  process: [
+    { n: '01', t: 'Discovery', d: 'We listen to your goals, review the drawings and assess the scope of the project.' },
+    { n: '02', t: 'Design', d: 'We prepare the solution, schedule and budget — clear and transparent.' },
+    { n: '03', t: 'Construction', d: 'Under engineering supervision, we carry out the works on time and to standard.' },
+    { n: '04', t: 'Handover', d: 'We check every detail and hand over a finished, reliable space.' },
+  ],
+
+  values: [
+    { t: 'Engineering precision', d: 'Engineering leadership is involved at every stage — from design to final handover.' },
+    { t: 'Deadlines kept', d: 'We work to a clear schedule and deliver projects on time and within budget.' },
+    { t: 'End-to-end process', d: 'One team runs the entire construction process — simple and transparent for you.' },
+  ],
+
+  team: [
+    { first: 'Grigol', last: 'Nadirashvili', role: 'Founder' },
+    { first: 'Tengiz', last: 'Savreshiani', role: 'Chief Executive Officer' },
+    { first: 'Gaga', last: 'Bakhturidze', role: 'Project Manager' },
+    { first: 'Viktor', last: 'Akhvlediani', role: 'Project Manager' },
+  ],
+
+  projects: {
+    'erisioni-studio': 'Erisioni Studio',
+    sakeni: 'Saken',
+    'kings-garden': 'Kings Garden',
+    'east-point': 'East Point',
+    'tbilisi-gardens': 'Tbilisi Gardens',
+    domino: 'Domino',
+    'radio-city': 'Radio City',
+    'aversi-clinic': 'Aversi Clinic',
+    'metropol-kavtaradze': 'Metropol Kavtaradze',
+    tabukashvili: 'Tabukashvili',
+    'cbd-development': 'CBD Development',
+    'seven-hills': 'Seven Hills',
+    biography: 'Biography',
+    anagi: 'Anagi',
+    impost: 'IMPOST',
+  },
+
+  alt: {
+    interior: 'Illustrative interior photo',
+    building: 'Illustrative photo of a modern building',
+    lit: 'Illustrative photo of an illuminated modern facade',
+    site: 'Illustrative photo of a building under construction',
+    project: 'Illustrative project photo',
+    heroNight: 'Modern villa lit up in the evening — illustrative photo',
+    heroFacade: 'Modern glass and brick facade at dusk — illustrative photo',
+    facade: 'Modern glass and brick facade — illustrative photo',
+    portrait: 'Placeholder portrait — team member',
+  },
+
+  hero: {
+    aria: 'We build reliable spaces',
+    eyebrow: 'Construction & interior fit-out',
+    l1: 'We build',
+    l2: 'high-quality,',
+    accent: 'reliable spaces.',
+    text: 'From design and engineering to installation and final handover — we make the entire construction process simple for you.',
+    cta: 'Our projects',
+    about: 'Meet ABC Construction',
+  },
+
+  aboutBlock: {
+    eyebrow: 'Who we are',
+    title: 'A contractor\nthat sees the job\nthrough to the end.',
+    p1: 'We build high-quality, reliable spaces on time and to standard, and make the entire construction process simple for our clients.',
+    p2: 'Our engineering leadership is involved at every stage — from design and installation to final handover.',
+    years: 'years creating reliable spaces',
+    oneTeam: 'One team. Full responsibility.',
+  },
+
+  homeServices: {
+    eyebrow: 'What we do',
+    title: 'At every stage\nof your project.',
+    text: 'We deliver construction projects from design and interior fit-out to installation and final handover.',
+  },
+
+  projectsSection: {
+    eyebrow: 'Selected work',
+    title: 'Spaces that\nspeak for us.',
+    text1: 'Our most recently delivered projects.',
+    text2: 'Construction and interior fit-out — from idea to finished space.',
+  },
+
+  promise: {
+    eyebrow: 'Our approach',
+    title: 'High quality.',
+    accent: 'In every detail.',
+    text: 'We build high-quality, reliable spaces on time and to standard, and make the entire construction process simple for our clients.',
+  },
+
+  teamSection: {
+    eyebrow: 'The people behind the projects',
+    title: 'Our team.',
+    text: 'Our own employees, not subcontractors. They are the ones who will assess your project and lead it.',
+    note: 'Portraits are placeholders and do not show actual team members.',
+  },
+
+  cta: {
+    title: "Let's build something that lasts.",
+    text: "Send us your drawings or simply tell us roughly what you need. We'll tell you honestly whether we're the right contractor for it.",
+  },
+
+  form: {
+    title: "Let's build\nsomething that\nlasts.",
+    text: "Send us your drawings or simply tell us roughly what you need. We'll tell you honestly whether we're the right contractor for it.",
+    name: 'Full name *',
+    namePh: 'Your name',
+    phone: 'Phone *',
+    email: 'Email',
+    emailPh: 'Your email',
+    message: 'About the project *',
+    messagePh: "Briefly tell us what you're planning...",
+    demo: 'Demo form — data is not sent yet.',
+    sentTitle: 'Request ready.',
+    sentText: 'This is a demo form — your data was not sent or stored.',
+    edit: 'Edit request',
+  },
+
+  pages: {
+    about: {
+      title: 'Company',
+      description: 'ABC Construction — a construction and interior fit-out team that sees the job through to the end.',
+      heroTitle: '17 years',
+      heroAccent: 'creating reliable spaces.',
+      heroText: 'We are a construction and interior fit-out team that creates high-quality, reliable spaces on time and within budget.',
+      valuesEyebrow: 'What we stand on',
+      valuesTitle: 'Our\nprinciples.',
+      valuesText: 'We make the entire construction process simple for our clients — with one team, a clear plan and full responsibility.',
+      processEyebrow: 'How we work',
+      processTitle: 'From idea\nto handover.',
+    },
+    services: {
+      title: 'Services',
+      description: 'Construction, engineering, project delivery, design and installation — from one team.',
+      heroTitle: 'At every stage',
+      heroAccent: 'of your project.',
+      heroText: 'We deliver construction projects from design and interior fit-out to installation and final handover.',
+      cardsAria: 'Service areas',
+      detailsEyebrow: 'In detail',
+      detailsTitle: 'What each\nservice includes.',
+      detailsText: 'Engineering leadership is involved at every stage, ensuring quality and reliability.',
+      processEyebrow: 'Process',
+      processTitle: 'Four steps —',
+      processAccent: 'one accountable team.',
+    },
+    projects: {
+      title: 'Projects',
+      description: 'Construction and interior fit-out projects delivered by ABC Construction.',
+      heroEyebrow: 'Selected work',
+      heroTitle: 'Spaces that',
+      heroAccent: 'speak for us.',
+      heroText: 'Our most recently delivered projects. Construction and interior fit-out — from idea to finished space.',
+      eyebrow: 'Portfolio',
+      gridTitle: 'Delivered\nprojects.',
+      gridText: 'Select a project to see the details.',
+    },
+    project: {
+      description: '— construction and interior fit-out.',
+      eyebrow: 'About the project',
+      title: 'From idea\nto finished space.',
+      text: 'A construction and interior fit-out project delivered as part of the ABC Construction portfolio. Engineering leadership was involved at every stage — from design and installation to final handover.',
+      facts: [
+        ['Category', 'Construction & interior fit-out'],
+        ['Status', 'Delivered'],
+        ['Contractor', 'ABC Construction'],
+      ],
+      galleryAria: 'Photo gallery',
+      galleryNote: 'Photos are for illustration only and do not show the actual project.',
+      moreEyebrow: 'Other projects',
+      moreTitle: 'See more.',
+    },
+    team: {
+      title: 'Team',
+      description: 'The people behind ABC Construction projects.',
+      heroTitle: 'One team.',
+      heroAccent: 'Full responsibility.',
+      eyebrow: 'Leadership',
+      text: 'Every project has an accountable manager who stays by your side from the first meeting to final handover.',
+      whyEyebrow: 'Why us',
+      whyTitle: 'A team that\nsees the job\nthrough.',
+    },
+    contact: {
+      title: 'Contact',
+      description: 'Get in touch and tell us about your project.',
+      heroTitle: 'Contact us',
+      heroText: "Send us drawings, a scope of work or just a short description. We'll tell you honestly whether we're the right contractor for the job.",
+      infoAria: 'Contact information',
+      phone: 'Phone',
+      email: 'Email',
+      address: 'Address',
+      hours: 'Working hours',
+      faqEyebrow: 'FAQ',
+      faqTitle: 'What happens\nafter you get in touch?',
+      faq: [
+        ['What information should I provide?', "A short description is enough — what you're planning, where, and roughly when. If you have drawings, they help too."],
+        ['Who will contact me?', 'A member of our team — the project manager who will then lead your project.'],
+        ['How will I receive a quote?', "After reviewing the project, we'll prepare a transparent proposal with a schedule and budget."],
+      ],
+    },
+    notFound: {
+      eyebrow: 'Page not found',
+      title: "This space hasn't",
+      accent: 'been built yet.',
+      home: 'Back to home',
+    },
+  },
+}

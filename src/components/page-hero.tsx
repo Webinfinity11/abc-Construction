@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Eyebrow } from './brand'
+import { getI18n } from '@/lib/i18n/server'
 import { F, W } from '@/lib/ui'
 
 type Crumb = { href: string; label: string }
 
 /** Shorter dark photo hero used on inner pages, matching the landing hero. */
-export function PageHero({
+export async function PageHero({
   eyebrow,
   title,
   accent,
@@ -21,18 +22,19 @@ export function PageHero({
   image: string
   crumbs?: Crumb[]
 }) {
+  const { t, href } = await getI18n()
   return (
     <section className="relative isolate flex min-h-[520px] items-end overflow-hidden bg-ink-800 pb-[60px] pt-[150px] text-white sm:min-h-[580px] sm:pb-[80px] sm:pt-[190px] xl:min-h-[620px]">
       <Image src={image} alt="" aria-hidden="true" fill priority sizes="100vw" className="-z-[3] object-cover object-center" />
       <div className="absolute inset-0 -z-[2] bg-[linear-gradient(90deg,rgba(22,18,14,.91),rgba(22,18,14,.6)),linear-gradient(0deg,rgba(22,18,14,.7),transparent_60%)] sm:bg-[linear-gradient(90deg,rgba(15,13,10,.9),rgba(15,13,10,.55)_50%,rgba(15,13,10,.15)_90%),linear-gradient(0deg,rgba(12,10,8,.75),transparent_50%)]" />
       <div className={W}>
         {crumbs.length > 0 && (
-          <nav aria-label="ნავიგაციის ბილიკი" className="mb-6 flex flex-wrap items-center gap-2 text-[12px] text-ink-200 sm:mb-8 sm:text-[13px]">
-            <Link href="/" className={`hover:text-brand-500 ${F}`}>მთავარი</Link>
+          <nav aria-label={t.ui.breadcrumb} className="mb-6 flex flex-wrap items-center gap-2 text-[12px] text-ink-200 sm:mb-8 sm:text-[13px]">
+            <Link href={href('/')} className={`hover:text-brand-500 ${F}`}>{t.nav.home}</Link>
             {crumbs.map((c) => (
               <span key={c.href} className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-ink-400">/</span>
-                <Link href={c.href} className={`hover:text-brand-500 ${F}`}>{c.label}</Link>
+                <Link href={href(c.href)} className={`hover:text-brand-500 ${F}`}>{c.label}</Link>
               </span>
             ))}
           </nav>

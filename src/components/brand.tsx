@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Fragment } from 'react'
 import { F } from '@/lib/ui'
 
 export function Mark({ big }: { big?: boolean }) {
@@ -13,9 +14,9 @@ export function Mark({ big }: { big?: boolean }) {
   )
 }
 
-export function Brand({ big }: { big?: boolean }) {
+export function Brand({ big, href = '/', label }: { big?: boolean; href?: string; label: string }) {
   return (
-    <Link href="/" aria-label="ABC Construction — მთავარი" className={`flex flex-shrink-0 items-center gap-2 leading-none sm:gap-2.5 ${F}`}>
+    <Link href={href} aria-label={label} className={`flex flex-shrink-0 items-center gap-2 leading-none sm:gap-2.5 ${F}`}>
       <Mark big={big} />
       <span className={`font-display font-bold uppercase leading-none tracking-[0.02em] text-brand-500 ${big ? 'text-[27px] sm:text-[29px]' : 'text-[21px] lg:text-[23px] xl:text-[25px]'}`}>
         ABC<span className="text-ink-900">Construction</span>
@@ -31,4 +32,14 @@ export function Eyebrow({ children, className = '' }: { children: React.ReactNod
       {children}
     </div>
   )
+}
+
+/** Renders "\n" in dictionary strings as line breaks. */
+export function Lines({ text }: { text: string }) {
+  return text.split('\n').map((l, i) => (
+    <Fragment key={i}>
+      {i > 0 && <br />}
+      {l}
+    </Fragment>
+  ))
 }
