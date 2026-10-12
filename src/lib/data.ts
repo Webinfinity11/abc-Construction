@@ -1,5 +1,3 @@
-import type { Dict } from './i18n'
-
 // ტექსტები ორივე ენაზე — lib/i18n/ka.ts და lib/i18n/en.ts.
 export const IMG = {
   night: 'https://live.staticflickr.com/3305/3640920662_308f24ee74_b.jpg',
@@ -17,30 +15,26 @@ export const NAV = [
   { href: '/team', key: 'team' },
 ] as const
 
-export type Project = { slug: string; src: string; alt: keyof Dict['alt'] }
+export type Project = { slug: string; src: string; gallery: string[] }
 
-const PHOTOS = [
-  { src: IMG.interior, alt: 'interior' },
-  { src: IMG.facade, alt: 'building' },
-  { src: IMG.night, alt: 'lit' },
-  { src: IMG.roof, alt: 'site' },
-] as const
+// თანმიმდევრობა საიტზე და ფოტოების რაოდენობა — public/projects/<slug>/1..n.webp (1000×1000).
+// სახელები — Dict['projects'].
+const OWN: [string, number][] = [
+  ['erisioni-studio', 1],
+  ['sakeni', 1],
+  ['kings-garden', 1],
+  ['east-point', 3],
+  ['tbilisi-gardens-1', 1],
+  ['tbilisi-gardens-2', 1],
+  ['tbilisi-gardens-3', 1],
+  ['domino-east-point', 1],
+  ['domino-dighomi', 1],
+  ['radio-city', 1],
+  ['aversi-clinic', 2],
+  ['metropol-kavtaradze', 2],
+]
 
-// თანმიმდევრობა საიტზე. სახელები — Dict['projects'].
-export const PROJECTS: Project[] = [
-  'erisioni-studio',
-  'sakeni',
-  'kings-garden',
-  'east-point',
-  'tbilisi-gardens',
-  'domino',
-  'radio-city',
-  'aversi-clinic',
-  'metropol-kavtaradze',
-  'tabukashvili',
-  'cbd-development',
-  'seven-hills',
-  'biography',
-  'anagi',
-  'impost',
-].map((slug, i) => ({ slug, ...PHOTOS[i % PHOTOS.length] }))
+export const PROJECTS: Project[] = OWN.map(([slug, n]) => {
+  const gallery = Array.from({ length: n }, (_, k) => `/projects/${slug}/${k + 1}.webp`)
+  return { slug, src: gallery[0], gallery }
+})

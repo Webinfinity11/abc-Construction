@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { Eyebrow, Lines } from '@/components/brand'
 import { PageHero } from '@/components/page-hero'
 import { CtaBand, ProjectCard } from '@/components/sections'
-import { IMG, PROJECTS } from '@/lib/data'
+import { PROJECTS } from '@/lib/data'
 import { getI18n } from '@/lib/i18n/server'
 import { BTN, F, OUTLINE, SECTION, TITLE, W } from '@/lib/ui'
 
@@ -32,7 +32,7 @@ export default async function ProjectPage(props: PageProps<'/[lang]/projects/[sl
   const prev = PROJECTS[(index + PROJECTS.length - 1) % PROJECTS.length]
   const next = PROJECTS[(index + 1) % PROJECTS.length]
   const others = [1, 2, 3, 4].map((d) => (index + d) % PROJECTS.length)
-  const gallery = [pr.src, IMG.interior, IMG.roof].filter((s, i, a) => a.indexOf(s) === i)
+  const gallery = pr.gallery
 
   return (
     <>
@@ -73,15 +73,14 @@ export default async function ProjectPage(props: PageProps<'/[lang]/projects/[sl
 
       {/* Gallery */}
       <section aria-label={p.galleryAria} className="pb-16 sm:pb-20 lg:pb-28">
-        <div className={`${W} grid gap-5 sm:grid-cols-2 sm:gap-6`}>
-          {gallery.map((src, i) => (
-            <div key={src} className={`relative overflow-hidden rounded-[20px] bg-ink-100 ${i === 0 ? 'h-[300px] sm:col-span-2 sm:h-[520px]' : 'h-[260px] sm:h-[360px]'}`}>
-              <Image src={src} alt={t.alt.project} fill sizes={i === 0 ? '100vw' : '50vw'} className="object-cover" />
+        <div className={`${W} grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3`}>
+          {gallery.map((src) => (
+            <div key={src} className="relative aspect-square overflow-hidden rounded-[20px] bg-ink-100">
+              <Image src={src} alt={name} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
             </div>
           ))}
         </div>
-        <div className={`${W} mt-[25px]`}>
-          <p className="text-[12px] leading-[1.7] text-ink-400">{p.galleryNote}</p>
+        <div className={W}>
           <div className="mt-8 flex flex-col gap-2.5 border-t border-ink-200 pt-8 sm:flex-row sm:justify-between">
             <Link href={href(`/projects/${prev.slug}`)} className={`${BTN} ${OUTLINE} border-ink-200`}>← {t.projects[prev.slug]}</Link>
             <Link href={href(`/projects/${next.slug}`)} className={`${BTN} ${OUTLINE} border-ink-200`}>{t.projects[next.slug]} →</Link>

@@ -19,8 +19,7 @@ export default async function TeamPage() {
       <PageHero
         eyebrow={t.teamSection.eyebrow}
         title={p.heroTitle}
-        accent={p.heroAccent}
-        text={t.teamSection.text}
+        text={p.heroText}
         image={IMG.interior}
         crumbs={[{ href: '/team', label: p.title }]}
       />

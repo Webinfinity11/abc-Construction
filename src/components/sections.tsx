@@ -80,19 +80,19 @@ export async function ServiceCards({ linked = false }: { linked?: boolean }) {
   )
 }
 
-export async function ProjectCard({ index, big }: { index: number; big?: boolean }) {
+export async function ProjectCard({ index }: { index: number }) {
   const { t, href } = await getI18n()
   const pr = PROJECTS[index]
   const name = t.projects[pr.slug]
   return (
-    <Link href={href(`/projects/${pr.slug}`)} aria-label={`${t.ui.viewProject}: ${name}`} className={`group relative block w-full text-left ${big ? 'sm:row-span-2' : ''} ${F}`}>
-      <div className={`relative overflow-hidden rounded-[20px] bg-ink-100 ${big ? 'h-[410px] sm:h-[539px] lg:h-[607px]' : 'h-[290px] sm:h-[210px] lg:h-[248px]'}`}>
+    <Link href={href(`/projects/${pr.slug}`)} aria-label={`${t.ui.viewProject}: ${name}`} className={`group relative block w-full text-left ${F}`}>
+      <div className="relative aspect-square overflow-hidden rounded-[20px] bg-ink-100">
         <Image
           src={pr.src}
-          alt={t.alt[pr.alt]}
+          alt={name}
           fill
-          sizes={big ? '(min-width: 640px) 58vw, 100vw' : '(min-width: 640px) 42vw, 100vw'}
-          className={`object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.6,.3,1)] group-hover:scale-[1.045] ${big ? 'object-[53%_center]' : ''}`}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.6,.3,1)] group-hover:scale-[1.045]"
         />
         <span className="absolute bottom-5 right-5 hidden translate-y-[5px] rounded-[50px] bg-brand-500 px-[18px] py-[11px] text-[13px] text-ink-900 opacity-0 transition duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 lg:block">
           {t.ui.viewProject}
@@ -113,8 +113,8 @@ export function ProjectsGrid({ all }: { all?: boolean }) {
   const rest = all ? PROJECTS.slice(3) : []
   return (
     <>
-      <div className="flex flex-col gap-[29px] sm:grid sm:grid-cols-[1.35fr_1fr] sm:gap-6 lg:gap-[29px]">
-        {PROJECTS.slice(0, 3).map((_, i) => <ProjectCard key={i} index={i} big={i === 0} />)}
+      <div className="grid gap-[29px] sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-[29px]">
+        {PROJECTS.slice(0, 3).map((_, i) => <ProjectCard key={i} index={i} />)}
       </div>
       {rest.length > 0 && (
         <div className="mt-[29px] grid gap-[29px] sm:mt-6 sm:grid-cols-2 sm:gap-6 lg:mt-[29px] lg:grid-cols-3 lg:gap-[29px]">
@@ -141,10 +141,29 @@ export async function ProjectsSection() {
           </p>
         </div>
         <ProjectsGrid />
-        <div className="mt-[25px] flex flex-col items-start gap-5 sm:mt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-[300px] text-[12px] leading-[1.7] text-ink-400 sm:max-w-none">{t.ui.photosNote}</p>
+        <div className="mt-[25px] flex sm:mt-8 sm:justify-end">
           <Link href={href('/projects')} className={LINK}>{t.ui.allProjects}</Link>
         </div>
+      </div>
+    </section>
+  )
+}
+
+export async function Partners() {
+  const { t } = await getI18n()
+  const p = t.partners
+  return (
+    <section aria-labelledby="partners-title" className={`border-t border-ink-200 ${SECTION}`}>
+      <div className={W}>
+        <Eyebrow>{p.eyebrow}</Eyebrow>
+        <h2 id="partners-title" className={`${TITLE} mb-[29px] max-w-[740px] sm:mb-11`}>{p.title}</h2>
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
+          {p.items.map((name) => (
+            <li key={name} className="grid min-h-[96px] place-items-center rounded-[20px] border border-ink-200 px-4 text-center text-[15px] font-medium sm:min-h-[120px] sm:text-[17px]">
+              {name}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

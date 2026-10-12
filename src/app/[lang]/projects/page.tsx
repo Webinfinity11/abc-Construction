@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Eyebrow, Lines } from '@/components/brand'
 import { PageHero } from '@/components/page-hero'
-import { CtaBand, ProjectsGrid, Stats } from '@/components/sections'
+import { CtaBand, Partners, ProjectsGrid, Stats } from '@/components/sections'
 import { IMG } from '@/lib/data'
 import { getI18n } from '@/lib/i18n/server'
 import { TITLE, W } from '@/lib/ui'
@@ -19,7 +19,6 @@ export default async function ProjectsPage() {
       <PageHero
         eyebrow={p.heroEyebrow}
         title={p.heroTitle}
-        accent={p.heroAccent}
         text={p.heroText}
         image={IMG.night}
         crumbs={[{ href: '/projects', label: p.title }]}
@@ -35,9 +34,9 @@ export default async function ProjectsPage() {
             </p>
           </div>
           <ProjectsGrid all />
-          <p className="mt-[25px] text-[12px] leading-[1.7] text-ink-400">{t.ui.photosNote}</p>
         </div>
       </section>
+      <Partners />
       <CtaBand />
     </>
   )

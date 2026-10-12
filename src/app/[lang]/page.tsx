@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Eyebrow, Lines } from '@/components/brand'
 import { ContactSection } from '@/components/contact-section'
 import { HeroSlider } from '@/components/hero-slider'
-import { AboutBlock, ProjectsSection, PromiseBand, Stats, TeamSection } from '@/components/sections'
+import { AboutBlock, Partners, ProjectsSection, PromiseBand, Stats, TeamSection } from '@/components/sections'
 import { ServicesAccordion } from '@/components/services-accordion'
 import { getI18n } from '@/lib/i18n/server'
 import { BTN, DARK, LINK, SECTION, TITLE, W } from '@/lib/ui'
@@ -35,6 +35,7 @@ export default async function Home() {
       </section>
 
       <ProjectsSection />
+      <Partners />
       <PromiseBand />
       <TeamSection />
       <ContactSection />
