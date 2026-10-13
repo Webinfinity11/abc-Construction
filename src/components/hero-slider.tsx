@@ -34,13 +34,13 @@ export function HeroSlider() {
           </div>
         ))}
       </div>
-      <div className="absolute inset-0 -z-[2] bg-[linear-gradient(90deg,rgba(22,18,14,.91),rgba(22,18,14,.53)),linear-gradient(0deg,rgba(22,18,14,.64),transparent_60%)] sm:bg-[linear-gradient(90deg,rgba(15,13,10,.87),rgba(15,13,10,.5)_46%,rgba(15,13,10,.06)_85%),linear-gradient(0deg,rgba(12,10,8,.7),transparent_44%)]" />
+      <div className="absolute inset-0 -z-[2] bg-[linear-gradient(90deg,rgba(22,18,14,.7),rgba(22,18,14,.3)),linear-gradient(0deg,rgba(22,18,14,.45),transparent_60%)] sm:bg-[linear-gradient(90deg,rgba(15,13,10,.66),rgba(15,13,10,.26)_46%,transparent_85%),linear-gradient(0deg,rgba(12,10,8,.45),transparent_44%)]" />
 
       <div className="mx-auto w-[calc(100%-40px)] max-w-[1320px] sm:w-[calc(100%-64px)] lg:w-[calc(100%-104px)]">
         <div className="max-w-[870px]">
           <Eyebrow className="!mb-[22px] text-ink-50 sm:!mb-[25px]">{t.hero.eyebrow}</Eyebrow>
           <h1 className="max-w-[560px] text-[36px] font-medium leading-[1.25] tracking-[-1.35px] sm:max-w-[740px] sm:text-[60px] sm:leading-[1.21] sm:tracking-[-2.3px] xl:max-w-[960px] xl:text-[73px]">
-            {t.hero.l1}<br className="hidden sm:block" /> {t.hero.l2}<br className="hidden sm:block" />{' '}
+            {t.hero.l1}<br className="hidden sm:block" />{' '}
             <span className="block text-brand-500 sm:inline">{t.hero.accent}</span>
           </h1>
           <p className="mt-[23px] max-w-[470px] text-[15px] leading-[1.8] text-ink-100 sm:mt-7 sm:max-w-[565px] sm:text-[16px] sm:leading-[1.85] xl:text-[17px]">

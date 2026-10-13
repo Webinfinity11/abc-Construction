@@ -137,11 +137,10 @@ export const en: Dict = {
   },
 
   hero: {
-    aria: 'We build reliable spaces',
+    aria: 'Georgian quality, European expertise',
     eyebrow: 'Construction & interior fit-out',
-    l1: 'We build',
-    l2: 'high-quality,',
-    accent: 'reliable spaces.',
+    l1: 'Georgian quality,',
+    accent: 'European expertise.',
     text: 'From design and engineering to installation and final handover — we make the entire construction process simple for you.',
     cta: 'Our projects',
     about: 'Meet ABC Construction',
