@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-50: #fff8e0;
-  --color-brand-100: #fff0bd;
-  --color-brand-200: #ffe380;
-  --color-brand-300: #ffd640;
-  --color-brand-400: #ffcc1a;
-  --color-brand-500: #ffc400;
-  --color-brand-600: #e5a800;
-  --color-brand-700: #b07d00;
-  --color-brand-800: #705006;
-  --color-brand-900: #4d3500;
-  --color-brand-950: #3b2800;
+  /* Brand orange taken from the ABC logo (#F49D34) */
+  --color-brand-50: #fef6ec;
+  --color-brand-100: #fdebd0;
+  --color-brand-200: #fbd5a1;
+  --color-brand-300: #f8be6b;
+  --color-brand-400: #f6ad4e;
+  --color-brand-500: #f49d34;
+  --color-brand-600: #d9811c;
+  --color-brand-700: #b06617;
+  --color-brand-800: #8a4f16;
+  --color-brand-900: #5e3511;
+  --color-brand-950: #3a1f08;
 
   --color-accent-50: #fdf3e8;
   --color-accent-100: #fae2c7;
