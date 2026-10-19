@@ -11,7 +11,7 @@ export function Brand({ big, href = '/', label }: { big?: boolean; href?: string
         width={680}
         height={444}
         priority={big}
-        className={big ? 'h-[88px] w-auto sm:h-[104px]' : 'h-[56px] w-auto sm:h-[64px] lg:h-[68px]'}
+        className={big ? 'h-[88px] w-auto sm:h-[104px]' : 'h-[54px] w-auto sm:h-[62px] lg:h-[66px]'}
       />
     </Link>
   )
