@@ -137,9 +137,9 @@ export const en: Dict = {
   },
 
   hero: {
-    aria: 'Georgian quality, European expertise',
+    aria: 'We build Georgian quality, with European expertise',
     eyebrow: 'Construction & interior fit-out',
-    l1: 'Georgian quality,',
+    l1: 'We build Georgian quality,',
     accent: 'European expertise.',
     text: 'From design and engineering to installation and final handover — we make the entire construction process simple for you.',
     cta: 'Our projects',
