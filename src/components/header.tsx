@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <header className="absolute inset-x-0 top-[17px] z-20 sm:top-7">
-      <div className="relative mx-auto flex min-h-[64px] w-[calc(100%-32px)] max-w-[1440px] items-center gap-3 rounded-[60px] bg-white py-2.5 pl-3.5 pr-3 shadow-[0_8px_35px_rgba(0,0,0,0.043)] sm:min-h-[72px] sm:w-[calc(100%-56px)] sm:gap-[22px] sm:pl-[26px] lg:min-h-[82px] lg:py-3 lg:pr-4 xl:gap-8">
+      <div className="relative mx-auto flex min-h-[64px] w-[calc(100%-32px)] max-w-[1440px] items-center gap-3 rounded-[60px] bg-white py-2.5 pl-3.5 pr-3 shadow-[0_8px_35px_rgba(0,0,0,0.043)] sm:min-h-[72px] sm:w-[calc(100%-56px)] sm:gap-[22px] sm:pl-[26px] lg:min-h-[82px] lg:py-2 lg:pr-4 xl:gap-8">
         <Brand href={href('/')} label={t.ui.homeAria} />
         <nav aria-label={t.ui.mainMenu} className="ml-auto hidden items-center gap-[18px] lg:flex xl:gap-[27px]">
           {links.map((n) => (

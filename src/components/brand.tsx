@@ -8,10 +8,10 @@ export function Brand({ big, href = '/', label }: { big?: boolean; href?: string
       <Image
         src="/brand/abc-logo.png"
         alt=""
-        width={834}
-        height={599}
+        width={680}
+        height={444}
         priority={big}
-        className={big ? 'h-[72px] w-auto sm:h-[84px]' : 'h-[52px] w-auto sm:h-[60px] lg:h-[64px]'}
+        className={big ? 'h-[88px] w-auto sm:h-[104px]' : 'h-[56px] w-auto sm:h-[64px] lg:h-[68px]'}
       />
     </Link>
   )
