@@ -41,7 +41,7 @@ export function HeroSlider() {
           <Eyebrow className="!mb-[22px] text-ink-50 sm:!mb-[25px]">{t.hero.eyebrow}</Eyebrow>
           <h1 className="max-w-[560px] text-[36px] font-medium leading-[1.25] tracking-[-1.35px] sm:max-w-[740px] sm:text-[60px] sm:leading-[1.21] sm:tracking-[-2.3px] xl:max-w-[960px] xl:text-[73px]">
             {t.hero.l1}<br className="hidden sm:block" />{' '}
-            <span className="block text-brand-500 sm:inline">{t.hero.accent}</span>
+            <span className="block text-brand-500 sm:inline sm:whitespace-nowrap">{t.hero.accent}</span>
           </h1>
           <p className="mt-[23px] max-w-[470px] text-[15px] leading-[1.8] text-ink-100 sm:mt-7 sm:max-w-[565px] sm:text-[16px] sm:leading-[1.85] xl:text-[17px]">
             {t.hero.text}
