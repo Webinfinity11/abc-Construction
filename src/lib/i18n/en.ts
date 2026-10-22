@@ -121,7 +121,20 @@ export const en: Dict = {
   partners: {
     eyebrow: 'Partners',
     title: 'Who we build with.',
-    items: ['CBD Development', 'BD Property', 'Anagi', 'Seven Hills', 'Biograpi', 'IMPOST'],
+    items: [
+      { name: 'Anagi', logo: '/partners/anagi.webp' },
+      { name: 'Biograpi', logo: '/partners/biograpi.webp' },
+      { name: 'Domino', logo: '/partners/domino.webp' },
+      { name: 'Element Construction', logo: '/partners/element.webp' },
+      { name: 'Kings Garden', logo: '/partners/kings-garden.webp' },
+      { name: 'Metropol', logo: '/partners/metropol.webp' },
+      { name: 'Tbili Saxli', logo: '/partners/tbili-saxli.webp' },
+      { name: 'Tbilisi Gardens', logo: '/partners/tbilisi-gardens.webp' },
+      { name: 'Metta', logo: '/partners/metta.webp' },
+      { name: 'Nova', logo: '/partners/nova.webp' },
+      { name: 'Seven Hills', logo: '/partners/seven-hills.webp' },
+      { name: 'GTC', logo: '/partners/gtc.webp' },
+    ],
   },
 
   alt: {

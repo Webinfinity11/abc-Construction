@@ -158,9 +158,11 @@ export async function Partners() {
         <Eyebrow>{p.eyebrow}</Eyebrow>
         <h2 id="partners-title" className={`${TITLE} mb-[29px] max-w-[740px] sm:mb-11`}>{p.title}</h2>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
-          {p.items.map((name) => (
-            <li key={name} className="grid min-h-[96px] place-items-center rounded-[20px] border border-ink-200 px-4 text-center text-[15px] font-medium sm:min-h-[120px] sm:text-[17px]">
-              {name}
+          {p.items.map(({ name, logo }) => (
+            <li key={logo} className="grid min-h-[96px] place-items-center rounded-[20px] border border-ink-200 p-5 sm:min-h-[120px] sm:p-6">
+              <span className="relative block h-[56px] w-full sm:h-[64px]">
+                <Image src={logo} alt={name} title={name} fill sizes="200px" className="object-contain" />
+              </span>
             </li>
           ))}
         </ul>

@@ -122,7 +122,20 @@ export const ka = {
   partners: {
     eyebrow: 'პარტნიორები',
     title: 'ვისთან ერთადაც ვაშენებთ.',
-    items: ['სიბიდი დეველოპმენტი', 'ბდ ფროფერთი', 'ანაგი', 'სევენ ჰილსი', 'ბიოგრაფი', 'იმპოსტი'],
+    items: [
+      { name: 'ანაგი', logo: '/partners/anagi.webp' },
+      { name: 'ბიოგრაფი', logo: '/partners/biograpi.webp' },
+      { name: 'დომინო', logo: '/partners/domino.webp' },
+      { name: 'ელემენტ კონსტრაქშენი', logo: '/partners/element.webp' },
+      { name: 'კინგს გარდენი', logo: '/partners/kings-garden.webp' },
+      { name: 'მეტროპოლი', logo: '/partners/metropol.webp' },
+      { name: 'თბილი სახლი', logo: '/partners/tbili-saxli.webp' },
+      { name: 'თბილისი გარდენს', logo: '/partners/tbilisi-gardens.webp' },
+      { name: 'მეტტა', logo: '/partners/metta.webp' },
+      { name: 'ნოვა', logo: '/partners/nova.webp' },
+      { name: 'სევენ ჰილსი', logo: '/partners/seven-hills.webp' },
+      { name: 'ჯი თი სი', logo: '/partners/gtc.webp' },
+    ],
   },
 
   alt: {
