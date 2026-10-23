@@ -159,9 +159,9 @@ export async function Partners() {
         <h2 id="partners-title" className={`${TITLE} mb-[29px] max-w-[740px] sm:mb-11`}>{p.title}</h2>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
           {p.items.map(({ name, logo }) => (
-            <li key={logo} className="grid min-h-[96px] place-items-center rounded-[20px] border border-ink-200 p-5 sm:min-h-[120px] sm:p-6">
-              <span className="relative block h-[56px] w-full sm:h-[64px]">
-                <Image src={logo} alt={name} title={name} fill sizes="200px" className="object-contain" />
+            <li key={logo} className="grid min-h-[120px] place-items-center rounded-[20px] border border-ink-200 bg-white p-3 sm:min-h-[144px] sm:p-4">
+              <span className="relative block aspect-[2/1] w-full max-w-[240px]">
+                <Image src={logo} alt={name} title={name} fill sizes="(max-width: 639px) 45vw, (max-width: 1023px) 30vw, 200px" className="object-contain" />
               </span>
             </li>
           ))}
