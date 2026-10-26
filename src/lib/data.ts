@@ -7,6 +7,9 @@ export const IMG = {
   portrait: 'https://live.staticflickr.com/4210/35001115431_f7e791a90a_b.jpg',
 }
 
+// გუნდის სექცია დროებით დამალულია, სანამ კლიენტი რეალურ ფოტოებს და მონაცემებს მოგვაწვდის.
+export const SHOW_TEAM = false
+
 export const NAV = [
   { href: '/', key: 'home' },
   { href: '/about', key: 'about' },

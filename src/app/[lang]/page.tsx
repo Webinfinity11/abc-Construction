@@ -4,6 +4,7 @@ import { ContactSection } from '@/components/contact-section'
 import { HeroSlider } from '@/components/hero-slider'
 import { AboutBlock, Partners, ProjectsSection, PromiseBand, Stats, TeamSection } from '@/components/sections'
 import { ServicesAccordion } from '@/components/services-accordion'
+import { SHOW_TEAM } from '@/lib/data'
 import { getI18n } from '@/lib/i18n/server'
 import { BTN, DARK, LINK, SECTION, TITLE, W } from '@/lib/ui'
 
@@ -37,7 +38,7 @@ export default async function Home() {
       <ProjectsSection />
       <Partners />
       <PromiseBand />
-      <TeamSection />
+      {SHOW_TEAM && <TeamSection />}
       <ContactSection />
     </>
   )

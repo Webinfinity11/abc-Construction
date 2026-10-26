@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { Eyebrow, Lines } from '@/components/brand'
 import { PageHero } from '@/components/page-hero'
 import { CtaBand, PromiseBand, TeamGrid } from '@/components/sections'
-import { IMG } from '@/lib/data'
+import { notFound } from 'next/navigation'
+import { IMG, SHOW_TEAM } from '@/lib/data'
 import { getI18n } from '@/lib/i18n/server'
 import { SECTION, TITLE, W } from '@/lib/ui'
 
@@ -12,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function TeamPage() {
+  if (!SHOW_TEAM) notFound()
   const { t } = await getI18n()
   const p = t.pages.team
   return (

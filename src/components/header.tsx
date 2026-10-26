@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Brand } from './brand'
-import { NAV } from '@/lib/data'
+import { NAV, SHOW_TEAM } from '@/lib/data'
 import { localize, type Lang } from '@/lib/i18n'
 import { useI18n } from '@/lib/i18n/client'
 import { BTN, F, YELLOW } from '@/lib/ui'
@@ -24,7 +24,7 @@ export function Header() {
   }, [])
 
   const isActive = (h: string) => (h === '/' ? path === '/' : path.startsWith(h))
-  const links = NAV.map((n) => ({ href: n.href, label: t.nav[n.key] }))
+  const links = NAV.filter((n) => SHOW_TEAM || n.key !== 'team').map((n) => ({ href: n.href, label: t.nav[n.key] }))
 
   return (
     <header className="absolute inset-x-0 top-[17px] z-20 sm:top-7">

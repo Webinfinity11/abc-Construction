@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Eyebrow, Lines } from './brand'
-import { IMG, PROJECTS } from '@/lib/data'
+import { IMG, PROJECTS, SHOW_TEAM } from '@/lib/data'
 import { getI18n } from '@/lib/i18n/server'
 import { BTN, DARK, F, LINK, NUM, SECTION, TITLE, W } from '@/lib/ui'
 
@@ -52,7 +52,7 @@ export async function AboutBlock({ withLink = true }: { withLink?: boolean }) {
             <div aria-hidden="true" className="grid h-[51px] w-[51px] flex-none place-items-center rounded-full bg-ink-50 font-[Arial] font-bold tracking-[-1px]">ABC</div>
             <div className="text-[14px] leading-[1.5]">
               <strong className="block font-semibold">{a.oneTeam}</strong>
-              {withLink && <Link href={href('/team')} className={`${LINK} mt-2`}>{t.ui.meetTeam}</Link>}
+              {withLink && SHOW_TEAM && <Link href={href('/team')} className={`${LINK} mt-2`}>{t.ui.meetTeam}</Link>}
             </div>
           </div>
         </div>

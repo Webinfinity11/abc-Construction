@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Brand } from './brand'
+import { SHOW_TEAM } from '@/lib/data'
 import { getI18n } from '@/lib/i18n/server'
 import { F, W } from '@/lib/ui'
 
@@ -13,7 +14,7 @@ export async function Footer() {
         <div className="pb-[27px] sm:flex sm:items-start sm:justify-between sm:gap-10 sm:pb-[38px] lg:items-center">
           <Brand big href={href('/')} label={t.ui.homeAria} />
           <nav aria-label={t.ui.footerNav} className="mt-[29px] flex flex-wrap gap-x-[25px] gap-y-[17px] text-[13px] sm:mt-0 sm:gap-5 sm:text-[14px] lg:gap-[30px]">
-            {LINKS.map((k) => (
+            {LINKS.filter((k) => SHOW_TEAM || k !== 'team').map((k) => (
               <Link key={k} href={href(`/${k}`)} className={`transition hover:text-ink-600 ${F}`}>{t.nav[k]}</Link>
             ))}
           </nav>
