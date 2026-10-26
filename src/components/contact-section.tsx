@@ -7,7 +7,7 @@ import { BTN, DARK, F } from '@/lib/ui'
 
 const INPUT = 'block w-full rounded-none border-0 border-b border-brand-800/45 bg-transparent px-px pb-[13px] pt-[9px] text-[16px] text-ink-900 placeholder:text-brand-800/80 focus:border-ink-900 focus:outline-none focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-accent-500'
 
-export function ContactSection({ aside }: { aside?: React.ReactNode }) {
+export function ContactSection({ aside, className = '' }: { aside?: React.ReactNode; className?: string }) {
   const { t } = useI18n()
   const f = t.form
   const [sent, setSent] = useState(false)
@@ -19,7 +19,7 @@ export function ContactSection({ aside }: { aside?: React.ReactNode }) {
   ]
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="px-3 pb-3.5 sm:px-7 sm:pb-7">
+    <section id="contact" aria-labelledby="contact-title" className={`px-3 pb-3.5 sm:px-7 sm:pb-7 ${className}`}>
       <div className="mx-auto max-w-[1600px] rounded-[20px] bg-brand-500 px-[22px] py-[43px] sm:grid sm:grid-cols-1 sm:gap-10 sm:rounded-[26px] sm:px-9 sm:py-[60px] lg:grid-cols-2 lg:gap-[50px] lg:px-10 lg:py-[77px] xl:gap-[95px] xl:px-[max(40px,calc((100%-1320px)/2))]">
         <div>
           <Eyebrow>{t.ui.letsTalk}</Eyebrow>

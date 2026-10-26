@@ -39,7 +39,8 @@ export default async function Home() {
       <Partners />
       <PromiseBand />
       {SHOW_TEAM && <TeamSection />}
-      <ContactSection />
+      {/* გუნდის სექციის გარეშე მუქი ზოლი და ფორთოხლისფერი ბარათი ერთმანეთს ეწებება. */}
+      <ContactSection className={SHOW_TEAM ? '' : 'pt-12 sm:pt-16 lg:pt-20'} />
     </>
   )
 }
