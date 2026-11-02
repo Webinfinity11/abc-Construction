@@ -107,7 +107,7 @@ export const ka = {
   projects: {
     'erisioni-studio': 'ერისიონის სტუდია',
     sakeni: 'საკენი',
-    'kings-garden': 'კინგს გარდენი',
+    'kings-garden': 'ქინგს გარდენი',
     'east-point': 'ისთ ფოინთი',
     'tbilisi-gardens-1': 'თბილისი გარდენსი 1',
     'tbilisi-gardens-2': 'თბილისი გარდენსი 2',
@@ -130,7 +130,7 @@ export const ka = {
       { name: 'ბიოგრაფი', logo: '/partners/biograpi.webp' },
       { name: 'დომინო', logo: '/partners/domino.webp' },
       { name: 'ელემენტ კონსტრაქშენი', logo: '/partners/element.webp' },
-      { name: 'კინგს გარდენი', logo: '/partners/kings-garden.webp' },
+      { name: 'ქინგს გარდენი', logo: '/partners/kings-garden.webp' },
       { name: 'მეტროპოლი', logo: '/partners/metropol.webp' },
       { name: 'თბილი სახლი', logo: '/partners/tbili-saxli.webp' },
       { name: 'თბილისი გარდენს', logo: '/partners/tbilisi-gardens.webp' },
