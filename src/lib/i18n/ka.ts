@@ -106,7 +106,7 @@ export const ka = {
   // პროექტების სახელები slug-ის მიხედვით (თანმიმდევრობა — lib/data.ts).
   projects: {
     'erisioni-studio': 'ერისიონის სტუდია',
-    sakeni: 'საქენი',
+    sakeni: 'საკენი',
     'kings-garden': 'კინგს გარდენი',
     'east-point': 'ისთ ფოინთი',
     'tbilisi-gardens-1': 'თბილისი გარდენსი 1',
