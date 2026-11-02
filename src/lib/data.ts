@@ -33,7 +33,10 @@ const OWN: [string, number][] = [
   ['domino-east-point', 1],
   ['domino-dighomi', 1],
   ['radio-city', 1],
-  ['aversi-clinic', 2],
+  ['aversi-clinic', 1],
+  ['bochorishvili-clinic', 1],
+  ['mcdonalds-saakadze', 3],
+  ['tabukashvili', 4],
   ['metropol-kavtaradze', 2],
 ]
 

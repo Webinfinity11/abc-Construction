@@ -116,6 +116,9 @@ export const en: Dict = {
     'radio-city': 'Radio City',
     'aversi-clinic': 'Aversi Clinic',
     'metropol-kavtaradze': 'Metropol Kavtaradze',
+    'bochorishvili-clinic': 'Vakhtang Bochorishvili Clinic',
+    'mcdonalds-saakadze': "McDonald's Saakadze",
+    'tabukashvili': 'Tabukashvili',
   },
 
   partners: {
@@ -134,6 +137,7 @@ export const en: Dict = {
       { name: 'Nova', logo: '/partners/nova.webp' },
       { name: 'Seven Hills', logo: '/partners/seven-hills.webp' },
       { name: 'GTC', logo: '/partners/gtc.webp' },
+      { name: 'IMPOST', logo: '/partners/impost.webp' },
     ],
   },
 

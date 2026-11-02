@@ -117,6 +117,9 @@ export const ka = {
     'radio-city': 'რადიო სითი',
     'aversi-clinic': 'ავერსი კლინიკი',
     'metropol-kavtaradze': 'მეტროპოლ ყავთარაძე',
+    'bochorishvili-clinic': 'ვახტანგ ბოჭორიშვილის კლინიკა',
+    'mcdonalds-saakadze': "McDonald's სააკაძე",
+    'tabukashvili': 'თაბუკაშვილი',
   } as Record<string, string>,
 
   partners: {
@@ -135,6 +138,7 @@ export const ka = {
       { name: 'ნოვა', logo: '/partners/nova.webp' },
       { name: 'სევენ ჰილსი', logo: '/partners/seven-hills.webp' },
       { name: 'ჯი თი სი', logo: '/partners/gtc.webp' },
+      { name: 'იმპოსტი', logo: '/partners/impost.webp' },
     ],
   },
 
